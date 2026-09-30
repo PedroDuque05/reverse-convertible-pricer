@@ -8,7 +8,8 @@ With SPX options quoted on 30 Sep 2026 (expiry 30 Sep 2027, spot 7,670.84), a 1-
 
 That breaks down roughly as 5.11% risk-free interest, plus 5.22% for the put the investor is effectively selling, minus 1.58% that the bank keeps (all compounded to maturity). So the extra yield over the risk-free rate is basically put premium.
 
-![Fair coupon vs volatility](figures/coupon_vs_vol.png)
+<img width="1029" height="586" alt="coupon_vs_vol" src="https://github.com/user-attachments/assets/55346ada-1490-4903-9c16-a114f9568854" />
+
 
 ## How the product works
 
@@ -37,7 +38,8 @@ A side benefit: the spot I had was the previous day's close, but the pricing inp
 
 **Volatility.** Implied vol from mid prices, 17.54% at the product strike (interpolated, since the spot isn't a listed strike). Put and call vols at the same strike agreed within 0.03 vol points, which was my check that r and q were right.
 
-![SPX implied volatility smile](figures/smile.png)
+<img width="1029" height="586" alt="smile" src="https://github.com/user-attachments/assets/e46d7820-d605-4872-be3e-9cff90a49598" />
+
 
 **Check.** Monte Carlo with 1M paths on the full payoff gives 0.98504 ± 0.00015 at the fair coupon, against a target of 0.98500.
 
